@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ddf8ff;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.head{
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+
+
+input{
+    width: 97%;
+    height: 40px;
+    outline: none;
+    /* border: none; */
+    margin: 10px 0;
+    /* background-color: #17364b; */
+    border-radius: 6px;
+    padding: 4px 8px;
+    color: #0d2538;
+}
+
+input:focus{
+    background-color: whitesmoke;
+    transform: scale(1.01);
+    transition-duration: .2s;
+}
+
+.prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.prices #total{
+    background-color:#9c1c1c ;
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+#total::before{
+    content: 'Total: ';
+}
+#category{
+    margin-bottom: 40px;
+}
+button{
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    background-color: #23beb4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(132, 255, 245, 0.5);
+}
+
+button:hover{
+    background-color: #1f9890;
+    letter-spacing: 0.2px;
+    transition-duration: .2s;
+}
+#submit {
+  background-color: #23beb4;
+  font-weight: bold;
+  transition: .2s;
+  box-shadow: 0 4px 12px rgba(106, 236, 225, 0.4);
+}
+
+#submit:hover {
+  background-color: #53d6cb;
+  transform: translateY(-2px);
+}
+.system{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* .inputs{
+    background-color: #ED985F;
+    padding: 40px;
+    border-radius: 5px;
+    width: 35%;
+    height: 450px;
+    box-shadow: 0 4px 12px rgba(132, 255, 245, 0.3);
+} */
+/* .outputs{
+    background-color: #ED985F;
+    padding: 40px;
+    width: 50%;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(132, 255, 245, 0.3);
+} */
+
+.outputs {
+    background-color: #0d2538; 
+    box-shadow: 0 4px 12px rgba(106, 236, 225, 0.2);
+    padding: 40px;
+    width: 60%;
+    height: 450px;
+    border-radius: 5px 18px 18px 80px;
+    overflow-y: auto;
+}
+
+.input-header{
+    text-align: center;
+    color: #0d2538;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.inputs{
+    width: 36%;
+    padding: 40px;
+}
+
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnSearch button{
+    width: 48%;
+}
+
+table{
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#update, #delete{
+    height: 30px;
+}
+#update{
+    background-color: #1f9890;
+}
+#delete{
+    background-color: #9c1c1c;
+    box-shadow: 0 4px 12px rgba(152, 9, 9, 0.5);
+
+}
+
+th, td{
+    padding: 5px;
+    background-color: #17364b;
+    padding: 8px;
+    border-bottom: 2px solid #0b1b28;
+}
+tr:hover td {
+  background-color: #1c4058;
+}
+th {
+  background-color: #0d2538;
+  padding-bottom: 20px;
+}
+
+
+
+
+/* ===========================
+   📌 Responsive Design 
+   =========================== */
+
+/* 1) شاشات متوسطة (تابلت) */
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+
+    .system {
+        gap: 20px;
+    }
+
+    .inputs, .outputs {
+        width: 48%;
+        height: auto;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* 2) شاشات صغيرة (موبايل كبير) */
+@media (max-width: 768px) {
+    .system {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .inputs, .outputs {
+        width: 100%;
+        margin-bottom: 25px;
+        height: auto;
+    }
+
+    .prices {
+        flex-wrap: wrap;
+    }
+
+    .prices input {
+        width: 48%;
+    }
+
+    #total {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+/* 3) شاشات صغيرة جدًا (موبايل عادي) */
+@media (max-width: 480px) {
+    input {
+        width: 100%;
+    }
+
+    .prices input {
+        width: 100%;
+    }
+
+    .btnSearch {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btnSearch button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 4px;
+    }
+}
